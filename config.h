@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono:size=16";
+static char *font = "RedHatMono:size=16";
 static char *font2[] = {"AppleColorEmoji:size=18"};
 static int borderpx = 2;
 
