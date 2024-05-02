@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Red Hat Mono:size=16";
-static char *font2[] = {"AppleColorEmoji:size=18"};
+static char *font = "Oxygen Mono:size=12";
+static char *font2[] = {"AppleColorEmoji:size=14"};
 static int borderpx = 2;
 
 /*
@@ -109,44 +109,6 @@ unsigned int tabspaces = 8;
 
 /* bg opacity */
 float alpha = 0.8;
-
-/* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-	/* 8 normal colors */
-	"#45475A",
-	"#F38BA8",
-	"#A6E3A1",
-	"#F9E2AF",
-	"#89B4FA",
-	"#F5C2E7",
-	"#94E2D5",
-	"#BAC2DE",
-
-	/* 8 bright colors */
-	"#585B70",
-	"#F38BA8",
-	"#A6E3A1",
-	"#F9E2AF",
-	"#89B4FA",
-	"#F5C2E7",
-	"#94E2D5",
-	"#A6ADC8",
-
-[256] = "#CDD6F4", /* default foreground colour */
-[257] = "#1E1E2E", /* default background colour */
-[258] = "#F5E0DC", /*575268*/
-
-};
-
-
-/*
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 256;
-unsigned int defaultbg = 257;
-unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 258;
-
 /*
  * Default shape of cursor
  * 2: Block ("█")
@@ -162,6 +124,34 @@ static unsigned int cursorshape = 6;
 
 static unsigned int cols = 80;
 static unsigned int rows = 24;
+
+static const char *colorname[] = {
+	"#1b1918", /* base00 */
+	"#f22c40", /* base08 */
+	"#7b9726", /* base0B */
+	"#c38418", /* base0A */
+	"#407ee7", /* base0D */
+	"#6666ea", /* base0E */
+	"#3d97b8", /* base0C */
+	"#a8a19f", /* base05 */
+	"#766e6b", /* base03 */
+	"#df5320", /* base09 */
+	"#2c2421", /* base01 */
+	"#68615e", /* base02 */
+	"#9c9491", /* base04 */
+	"#e6e2e0", /* base06 */
+	"#c33ff3", /* base0F */
+	"#f1efee", /* base07 */
+};
+
+
+/*
+ * foreground, background, cursor, reverse cursor
+ */
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 13;
+static unsigned int defaultrcs = 0;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -557,3 +547,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+/* Terminal colors (16 first used in escape sequence) */
