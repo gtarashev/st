@@ -108,7 +108,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1.0;
 /*
  * Default shape of cursor
  * 2: Block ("█")
@@ -126,32 +126,60 @@ static unsigned int cols = 80;
 static unsigned int rows = 24;
 
 static const char *colorname[] = {
-	"#1b1918", /* base00 */
-	"#f22c40", /* base08 */
-	"#7b9726", /* base0B */
-	"#c38418", /* base0A */
-	"#407ee7", /* base0D */
-	"#6666ea", /* base0E */
-	"#3d97b8", /* base0C */
-	"#a8a19f", /* base05 */
-	"#766e6b", /* base03 */
-	"#df5320", /* base09 */
-	"#2c2421", /* base01 */
-	"#68615e", /* base02 */
-	"#9c9491", /* base04 */
-	"#e6e2e0", /* base06 */
-	"#c33ff3", /* base0F */
-	"#f1efee", /* base07 */
+	/* 8 normal colors */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
+
+	/* 8 bright colors */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#cccccc", // 256
+	"#555555", // 257
+	"gray90", /* default foreground colour */
+	"black", /* default background colour */
+	/* solarized dark */
+	"#073642",  /*  0: black    */
+	"#dc322f",  /*  1: red      */
+	"#859900",  /*  2: green    */
+	"#b58900",  /*  3: yellow   */
+	"#268bd2",  /*  4: blue     */
+	"#d33682",  /*  5: magenta  */
+	"#2aa198",  /*  6: cyan     */
+	"#eee8d5",  /*  7: white    */
+	"#002b36",  /*  8: brblack  */
+	"#cb4b16",  /*  9: brred    */
+	"#586e75",  /* 10: brgreen  */
+	"#657b83",  /* 11: bryellow */
+	"#839496",  /* 12: brblue   */
+	"#6c71c4",  /* 13: brmagenta*/
+	"#93a1a1",  /* 14: brcyan   */
+	"#fdf6e3",  /* 15: brwhite  */
 };
 
 
 /*
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 13;
-static unsigned int defaultrcs = 0;
+unsigned int defaultfg = 12;
+unsigned int defaultbg = 268;
+unsigned int defaultcs = 14;
+static unsigned int defaultrcs = 15;
 
 /*
  * Default colour and shape of the mouse cursor
