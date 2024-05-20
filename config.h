@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Red Hat Mono:size=16";
-static char *font2[] = {"AppleColorEmoji:size=18"};
+static char *font = "Oxygen Mono:size=13";
+static char *font2[] = {"AppleColorEmoji:size=15"};
 static int borderpx = 2;
 
 /*
